@@ -34,7 +34,10 @@ public class Forme {
     // renvoyer vrai si le x donné est dans l'espace horizontal de la forme
     // renvoyer faux sinon
 
-    if(x >= this.x && x<= longueur){
+    if(x >= this.x && x<= this.x + longueur){
+      return true;
+    }
+    else if(x <= this.x && x>= this.x + longueur){
       return true;
     }
 
@@ -47,7 +50,10 @@ public class Forme {
     // renvoyer vrai si le y donné est dans l'espace vertical de la forme
     // renvoyer faux sinon
 
-    if(y >= this.y && y<= hauteur){
+    if(y >= this.y && y<= this.y + hauteur){
+      return true;
+    }
+    else if(y <= this.y && y>= this.y + hauteur){
       return true;
     }
 

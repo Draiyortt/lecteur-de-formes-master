@@ -176,10 +176,10 @@ public class EditeurDeFormes extends JFrame {
   }
 
 public MidiSynth getMidiSynth() {
-    return null;
+    return midiSynth;
 }
 
 public Dessin getDessinCourant() {
-    return null;
+    return dessinCourant;
 }
 }

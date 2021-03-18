@@ -3,6 +3,8 @@ package fr.pgah.java.unbrco.lecteurs;
 import fr.pgah.java.unbrco.model.Dessin;
 import fr.pgah.java.unbrco.model.Forme;
 import fr.pgah.java.unbrco.ui.EditeurDeFormes;
+
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.Timer;
 import java.awt.event.ActionEvent;
@@ -23,6 +25,9 @@ public class LecteurDeDessin implements ActionListener {
 
     this.dessin = dessin;
     this.timer = timer;
+    this.colonneEnCours = 0;
+    dansLaColonnePrecedente = new ArrayList<>();
+    dansLaColonneCourante = new ArrayList<>();
 
   }
 

@@ -61,8 +61,9 @@ public class Dessin extends JPanel {
 
     // À COMPLÈTER
     // Ajouter la forme donnée au dessin
-
-    formes.add(f);
+    if(f!=null){
+      formes.add(f);
+    }
 
   }
 
@@ -70,9 +71,9 @@ public class Dessin extends JPanel {
 
     // À COMPLÈTER
     // Supprimer la forme donnée du dessin
-
+    if(f!=null){
     formes.remove(f);
-
+    }
   }
 
   public Forme getPremiereFormeEn(Point point) {
