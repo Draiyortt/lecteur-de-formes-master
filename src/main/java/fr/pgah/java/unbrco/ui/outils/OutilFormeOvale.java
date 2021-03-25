@@ -1,6 +1,7 @@
 package fr.pgah.java.unbrco.ui.outils;
 
 import fr.pgah.java.unbrco.model.Forme;
+import fr.pgah.java.unbrco.model.Ovale;
 import fr.pgah.java.unbrco.ui.EditeurDeFormes;
 
 import javax.swing.JButton;
@@ -9,20 +10,23 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 
-public class OutilForme extends Outil {
+public class OutilFormeOvale extends Outil {
 
   private Forme forme;
 
-  public OutilForme(EditeurDeFormes editeur, JComponent parent) {
+  public OutilFormeOvale(EditeurDeFormes editeur, JComponent parent) {
     super(editeur, parent);
     forme = null;
   }
 
   @Override
   protected void creerBouton(JComponent parent) {
-    bouton = new JButton("Forme");
+    bouton = new JButton("Forme Ovale");
     bouton = customiserButton(bouton);
+      
   }
+
+  
 
   @Override
   protected void ajouterListener() {
@@ -31,7 +35,7 @@ public class OutilForme extends Outil {
 
   @Override
   public void pressDansZoneDessin(MouseEvent e) {
-    forme = new Forme(e.getPoint(), editeur.getMidiSynth());
+    forme = new Ovale(e.getPoint(), editeur.getMidiSynth());
     forme.selectionnerEtJouer();
     forme.setLimites(e.getPoint());
     editeur.ajouterAuDessin(forme);
@@ -52,7 +56,7 @@ public class OutilForme extends Outil {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-      editeur.setOutilActif(OutilForme.this);
+      editeur.setOutilActif(OutilFormeOvale.this);
     }
   }
 }

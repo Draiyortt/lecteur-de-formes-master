@@ -41,6 +41,8 @@ public class Dessin extends JPanel {
     dessinerLignesHorizontales(g);
     for (Forme forme : formes) {
       forme.dessiner(g);
+
+      
     }
   }
 
@@ -100,7 +102,7 @@ public class Dessin extends JPanel {
 
     List<Forme> colonne = new ArrayList<Forme>();
 
-    for (Forme forme : colonne) {
+    for (Forme forme : formes) {
       if( forme.contientX(col)){
         colonne.add(forme);
       }
