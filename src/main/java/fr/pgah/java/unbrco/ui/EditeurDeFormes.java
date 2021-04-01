@@ -129,6 +129,9 @@ public class EditeurDeFormes extends JFrame {
     OutilFormeOvale outilFormeOvale = new OutilFormeOvale(this, zoneOutils);
     outils.add(outilFormeOvale);
 
+    OutilFormeArc outilFormeArc = new OutilFormeArc(this, zoneOutils);
+    outils.add(outilFormeArc);
+
     OutilDeplacer outilDeplacer = new OutilDeplacer(this, zoneOutils);
     outils.add(outilDeplacer);
 

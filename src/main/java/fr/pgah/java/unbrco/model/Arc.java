@@ -3,14 +3,19 @@ package fr.pgah.java.unbrco.model;
 import fr.pgah.java.son.MidiSynth;
 import java.awt.*;
 
-public class Ovale extends Forme{
+
+public class Arc extends Forme{
     
     private static final Color COULEUR_LIGNE_JOUEE = new Color(230, 158, 60);
+    private int startAngle;
+    private int arcAngle;
  
 
-  public Ovale(Point hautGauche, MidiSynth midiSynth) {
+  public Arc(Point hautGauche, MidiSynth midiSynth) {
     super(hautGauche, midiSynth);
-    instrument = 35;
+    instrument = 45;
+    startAngle = 90;
+    arcAngle = 180;
   }
 
   public void dessiner(Graphics g) {
@@ -18,11 +23,11 @@ public class Ovale extends Forme{
     if (estSelectionnee) {
       g.setColor(COULEUR_LIGNE_JOUEE);
     } else {
-      g.setColor(Color.blue);
+      g.setColor(Color.green);
     }
-    g.fillOval(x, y, longueur, hauteur);
+    g.fillArc(x, y, longueur, hauteur, startAngle, arcAngle);
     g.setColor(saveCouleur);
-    g.drawOval(x, y, longueur, hauteur);
+    g.drawArc(x, y, longueur, hauteur, startAngle, arcAngle);
 
     if (colonneJouee > 0 && colonneJouee < longueur) {
       g.setColor(Color.red);

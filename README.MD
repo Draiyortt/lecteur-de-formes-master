@@ -17,3 +17,12 @@ Projet support SLAM5.
 
 La fonctionnalité "Jouer tout le dessin" n'est pas encore fonctionnel.
 
+## 25/03
+
+- La fonctionnalité "Jouer tout le dessin" fonctionne.
+- Une nouvelle forme a été créée : l'ovale et fait un son de trompette.
+
+## 01/04
+
+- Une nouvelle forme a été créée : l'arc.
+
